@@ -29,7 +29,14 @@ sudo service td-agent start
 ## Install Fluentd Plugin for Google Cloud Storage
 [source](https://rubygems.org/gems/fluent-plugin-google-cloud-storage)
 ```
-td-agent-gem install fluent-plugin-google-cloud-storage
+sudo td-agent-gem install fluent-plugin-google-cloud-storage
+sudo service td-agent restart
+```
+
+## Install Fluentd Plugin for ElasticSearch
+[source](https://www.fluentd.org/guides/recipes/elasticsearch-and-s3)
+```
+sudo td-agent-gem install fluent-plugin-elasticsearch
 sudo service td-agent restart
 ```
 
