@@ -21,8 +21,9 @@ sudo /usr/local/bin/gem update
 ## Install fluentd on CentOS 
 [source](https://docs.fluentd.org/v0.12/articles/install-by-rpm)
 ```
-curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
-chkconfig td-agent on
+cd /tmp
+sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
+sudo chkconfig td-agent on
 sudo service td-agent start
 ```
 
