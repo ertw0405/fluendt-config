@@ -27,6 +27,25 @@ sudo chkconfig td-agent on
 sudo service td-agent start
 ```
 
+## Sample td-agent.conf
+```
+<source>
+  @type forward
+  port 24224
+</source>
+
+<match mam.**>
+  @type file
+  path /vol1/fluent/myapp/%Y/%m/%d/myapp_${chunk_id}-%Y-%m-%d-%H.log.gz
+  compress gzip
+  localtime true
+  <buffer time>
+    timekey 1h
+    timekey_wait 10m
+  </buffer>
+</match>
+```
+
 ## Install Fluentd Plugin for Google Cloud Storage
 [source](https://rubygems.org/gems/fluent-plugin-google-cloud-storage)
 ```
