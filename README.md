@@ -4,18 +4,19 @@ Ruby and Fluentd and Google Cloud Storage Plugin Setup
 ## Upgrade Ruby on CentOS
 [source](http://ask.xmodulo.com/upgrade-ruby-centos.html)
 ```
-sudo yum remove ruby ruby-devel
-sudo yum groupinstall -y "Development Tools"
-sudo yum install -y openssl-devel
-cd /tmp
-wget http://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
-tar xvfvz ruby-2.4.1.tar.gz
-cd ruby-2.4.1
-./configure && make
-sudo make install
-sudo /usr/local/bin/gem update --system
-sudo /usr/local/bin/gem install bundler
-sudo /usr/local/bin/gem update
+sudo yum remove ruby ruby-devel;
+sudo yum groupinstall -y "Development Tools";
+sudo yum install -y openssl-devel;
+cd /tmp;
+wget http://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz;
+tar xvfvz ruby-2.4.1.tar.gz;
+cd ruby-2.4.1;
+./configure && make;
+sudo make install;
+sudo /usr/local/bin/gem update --system;
+sudo /usr/local/bin/gem install bundler;
+sudo /usr/local/bin/gem update;
+
 ```
 
 ## Install fluentd on CentOS 
